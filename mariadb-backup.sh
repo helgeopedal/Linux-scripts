@@ -17,7 +17,7 @@ for i in $LISTA; do echo "cd /backup/; mysqldump --lock-tables=false $i  > /back
 echo "cd /backup/; gzip *.sql" >> /backup/runme.sh
 
 # Make the script runable
-chmod 755 /backup//runme.sh
+chmod 755 /backup/runme.sh
 
 # Run backup
 /backup/runme.sh
