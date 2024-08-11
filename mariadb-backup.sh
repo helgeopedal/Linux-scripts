@@ -13,7 +13,7 @@
 # NOTE: check if the commands actually gives a reasonable list. It might vary on different Linux systems
 LISTA=`find /var/lib/mysql/ -maxdepth 1 -type d | awk -F '/' '{print $5}' | sort | uniq | sed '/^$/d'`
 
-for i in $LISTA; do echo "cd /backup/; mysqldump --lock-tables=false $i  > /backup/$i.$(date +%Y-%m-%d:%T).sql"; done > /backup/helge/runme.sh
+for i in $LISTA; do echo "cd /backup/; mysqldump --lock-tables=false $i  > /backup/$i.$(date +%Y-%m-%d:%T).sql"; done > /backup/runme.sh
 echo "cd /backup/; gzip *.sql" >> /backup/runme.sh
 
 # Make the script runable
