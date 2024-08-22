@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Helge Opedal
 # Disclaimer
 # Please I don't take any responsibility for any errors this script might do
 # Always remember to test before running any on a production server
